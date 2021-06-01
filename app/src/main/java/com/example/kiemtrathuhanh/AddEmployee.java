@@ -30,6 +30,7 @@ public class AddEmployee extends AppCompatActivity {
 
         btnCreate = findViewById(R.id.btnCreate);
         btnBack = findViewById(R.id.btnBack2);
+
         edName = findViewById(R.id.edName);
         edAge = findViewById(R.id.edAge);
         edDepartment = findViewById(R.id.edDepartment);
@@ -67,8 +68,8 @@ public class AddEmployee extends AppCompatActivity {
                 String department = edDepartment.getText().toString();
                 params.put("id",id);
                 params.put("name",name);
-                params.put("age",name);
-                params.put("dep",name);
+                params.put("age",age);
+                params.put("dep",department);
                 return params;
             }
         };

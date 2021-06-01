@@ -15,14 +15,16 @@
         <activity android:name=".UpdateEmployee" />
         <activity android:name=".AddEmployee" />
         <activity android:name=".ShowInfo">
+
+        </activity>
+        <activity android:name=".Manager" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Manager" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
