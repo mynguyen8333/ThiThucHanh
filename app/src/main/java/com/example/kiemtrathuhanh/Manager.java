@@ -21,5 +21,8 @@ public class Manager extends AppCompatActivity {
         btnLogout.setOnClickListener(view->{
             startActivity(new Intent( Manager.this,MainActivity.class));
         });
+        btnShowInfo.setOnClickListener(view->{
+            startActivity(new Intent(Manager.this,ShowInfo.class));
+        });
     }
 }
