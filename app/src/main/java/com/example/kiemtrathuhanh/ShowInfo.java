@@ -95,12 +95,14 @@ public class ShowInfo extends AppCompatActivity implements OnClickListner{
 
     @Override
     public void buttonxoaClick(Person person) {
-
+        Intent intent = new Intent(ShowInfo.this,Delete.class);
+        intent.putExtra("key1",person);
+        startActivity(intent);
     }
 
     @Override
     public void buttonsuaClick(Person person) {
-        String id =  person.getId();
+        //String id =  person.getId();
         Intent intent = new Intent(ShowInfo.this,UpdateEmployee.class);
         intent.putExtra("key1",person);
         startActivity(intent);

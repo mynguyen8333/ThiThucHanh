@@ -55,6 +55,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             btnupdate.setOnClickListener(view->{
                 listener.buttonsuaClick(person);
             });
+            btndelete.setOnClickListener(view->{
+                listener.buttonxoaClick(person);
+            });
         }
 
     }
