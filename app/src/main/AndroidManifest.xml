@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KiemTraThuHanh">
-        <activity android:name=".AddEmployee"></activity>
+        <activity android:name=".Delete"></activity>
+        <activity android:name=".UpdateEmployee" />
+        <activity android:name=".AddEmployee" />
         <activity android:name=".ShowInfo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Manager" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
