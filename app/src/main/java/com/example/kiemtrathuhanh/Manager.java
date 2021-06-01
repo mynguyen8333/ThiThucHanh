@@ -24,5 +24,8 @@ public class Manager extends AppCompatActivity {
         btnShowInfo.setOnClickListener(view->{
             startActivity(new Intent(Manager.this,ShowInfo.class));
         });
+        btnaddEploy.setOnClickListener(view->{
+            startActivity(new Intent(Manager.this,AddEmployee.class));
+        });
     }
 }
