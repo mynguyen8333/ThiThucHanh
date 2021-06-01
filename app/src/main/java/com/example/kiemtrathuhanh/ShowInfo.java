@@ -21,7 +21,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ShowInfo extends AppCompatActivity {
+public class ShowInfo extends AppCompatActivity implements OnClickListner{
     RecyclerView rcv_peson;
     Button btnBack;
     ArrayList<Person> mpersons;
@@ -72,7 +72,7 @@ public class ShowInfo extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                adt = new CustomAdapter(mpersons);
+                adt = new CustomAdapter(mpersons,ShowInfo.this);
                 rcv_peson.setHasFixedSize(true);
                 rcv_peson.setAdapter(adt);
                 rcv_peson.setLayoutManager(new GridLayoutManager(ShowInfo.this,1));
@@ -86,5 +86,23 @@ public class ShowInfo extends AppCompatActivity {
         });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(request);
+    }
+
+    @Override
+    public void itemClicklistener(Person person) {
+
+    }
+
+    @Override
+    public void buttonxoaClick(Person person) {
+
+    }
+
+    @Override
+    public void buttonsuaClick(Person person) {
+        String id =  person.getId();
+        Intent intent = new Intent(ShowInfo.this,UpdateEmployee.class);
+        intent.putExtra("key1",person);
+        startActivity(intent);
     }
 }
